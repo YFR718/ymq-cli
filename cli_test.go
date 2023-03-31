@@ -24,3 +24,15 @@ func Test_Create(t *testing.T) {
 	}
 
 }
+
+func Test_Create_Topic(t *testing.T) {
+	topic := Topic{Name: "topic1"}
+	err := topic.Create()
+	if err != nil {
+		t.Error(err)
+	}
+	err = topic.Delete()
+	if err != nil {
+		t.Error(err)
+	}
+}
